@@ -14,19 +14,19 @@ class Algoritms(object):
 					print("Привет")
 					condition = False
 				elif vvod_int == 7:
-					print("Введенное вами число равно \'7\', попробуйте еще раз!")
+					print("Введенное вами число равно \"7\", необходимо ввести число выше!")
 				else:
-					print("Введенное вами число меньше \'7\', попробуйте еще раз!")
+					print("Введенное вами число меньше \"7\", необходимо ввести число выше 7!")
 			except ValueError:
 				print("Вы ввели не целое число!")
 			
 	def vvod_info_name(self):
-		"""Этот метод реализует проверку имени"""
+		"""Этот метод реализует проверку имени (без учета регистра)"""
 		time.sleep(1)
 		condition = True
-		while condition:	
+		while condition:
 			vvod_name = input("Введите Имя: ")
-			if vvod_name == "Вячеслав":
+			if vvod_name == "Вячеслав" or vvod_name == "вячеслав":
 				print(f"Привет, {vvod_name}")
 				condition = False
 			else:
@@ -35,7 +35,7 @@ class Algoritms(object):
 	def vvod_info_array(self):
 		"""Этот метод риализует проверку массива и выбирает те элементы, которые кратны 3 (исключает дубликаты)"""
 		time.sleep(1)
-		try:	
+		try:
 			vvod_mass = input("Введите элементы массива через пробел: ")
 			main_mass = []
 			result = []
@@ -59,13 +59,13 @@ class Algoritms(object):
 def main():
 	try:
 		input("Нажмите любую клавишу для начала работы ...")
-		Evgen = Algoritms() #создания экземпляра класса
-		print("Задание 1.1")
-		Evgen.vvod_info_int() #вызов метода vvod_info_int 
-		print("Задание 1.2")
-		Evgen.vvod_info_name() #вызов метода vvod_info_name
-		print("Задание 1.3")
-		Evgen.vvod_info_array() #вызов метода vvod_info_array
+		run = Algoritms() #создания экземпляра класса
+		print("Задание 1")
+		run.vvod_info_int() #вызов метода vvod_info_int 
+		print("Задание 2")
+		run.vvod_info_name() #вызов метода vvod_info_name
+		print("Задание 3")
+		run.vvod_info_array() #вызов метода vvod_info_array
 		input("Для выхода нажмите любую клавишу...")
 		print("Спасибо за внимание!")
 		time.sleep(3)
