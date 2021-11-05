@@ -57,17 +57,21 @@ class Algoritms(object):
 			print("Вы неправильно ввели массив!")
 
 def main():
-	input("Нажмите любую клавишу для начала работы ...")
-	Evgen = Algoritms() #создания экземпляра класса
-	print("Задание 1.1")
-	Evgen.vvod_info_int() #вызов метода vvod_info_int 
-	print("Задание 1.2")
-	Evgen.vvod_info_name() #вызов метода vvod_info_name
-	print("Задание 1.3")
-	Evgen.vvod_info_array() #вызов метода vvod_info_array
-	input("Для выхода нажмите любую клавишу...")
-	print("Спасибо за внимание!")
-	time.sleep(3)
+	try:
+		input("Нажмите любую клавишу для начала работы ...")
+		Evgen = Algoritms() #создания экземпляра класса
+		print("Задание 1.1")
+		Evgen.vvod_info_int() #вызов метода vvod_info_int 
+		print("Задание 1.2")
+		Evgen.vvod_info_name() #вызов метода vvod_info_name
+		print("Задание 1.3")
+		Evgen.vvod_info_array() #вызов метода vvod_info_array
+		input("Для выхода нажмите любую клавишу...")
+		print("Спасибо за внимание!")
+		time.sleep(3)
+	except :
+		print("Ожидается принудительный выход из программы...")
+		time.sleep(2)
 
 if __name__ == "__main__":
 	main() #вызов основной функции main в главном модуле
