@@ -69,7 +69,7 @@ def main():
 		input("Для выхода нажмите любую клавишу...")
 		print("Спасибо за внимание!")
 		time.sleep(3)
-	except :
+	except KeyboardInterrupt:
 		print("Ожидается принудительный выход из программы...")
 		time.sleep(2)
 
