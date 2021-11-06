@@ -59,7 +59,7 @@ class Algoritms(object):
 def main():
 	try:
 		input("Нажмите любую клавишу для начала работы ...")
-		run = Algoritms() #создания экземпляра класса
+		run = Algoritms() #создание экземпляра класса
 		print("Задание 1")
 		run.vvod_info_int() #вызов метода vvod_info_int 
 		print("Задание 2")
