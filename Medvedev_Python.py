@@ -39,7 +39,7 @@ class Algoritms(object):
 			vvod_mass = input("Введите элементы массива через пробел: ")
 			main_mass = []
 			result = []
-			if " " in vvod_mass:
+			if " " in vvod_mass or len(vvod_mass) != 0:
 				vvod_mass = vvod_mass.split(" ")
 				for i in vvod_mass:
 					main_mass.append(int(i))
@@ -48,7 +48,7 @@ class Algoritms(object):
 						if j not in result:
 							result.append(j)
 				if len(result) == 0:
-					print("В введенном вами масиве отсутствуют элементы кратные '3'")
+					print("В введенном вами массиве отсутствуют элементы кратные '3'")
 				else:
 					print(f"Элементы массива кратные '3': {tuple(result)}") 
 			else:
