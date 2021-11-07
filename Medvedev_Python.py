@@ -27,7 +27,7 @@ class Algoritms(object):
 		while condition:
 			vvod_name = input("Введите Имя: ")
 			if vvod_name == "Вячеслав" or vvod_name == "вячеслав":
-				print(f"Привет, {vvod_name}")
+				print(f"Привет, Вячеслав")
 				condition = False
 			else:
 				print("Нет такого имени")
