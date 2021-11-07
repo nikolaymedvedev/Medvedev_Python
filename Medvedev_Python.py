@@ -41,18 +41,19 @@ class Algoritms(object):
 			result = []
 			if " " in vvod_mass or len(vvod_mass) != 0:
 				vvod_mass = vvod_mass.split(" ")
-				for i in vvod_mass:
-					main_mass.append(int(i))
-				for j in main_mass:
-					if j % 3 == 0:
-						if j not in result:
-							result.append(j)
-				if len(result) == 0:
-					print("В введенном вами массиве отсутствуют элементы кратные '3'")
-				else:
-					print(f"Элементы массива кратные '3': {tuple(result)}") 
+			for i in vvod_mass:
+				main_mass.append(int(i))
+			for j in main_mass:
+				if j % 3 == 0:
+					if j not in result:
+						result.append(j)
+			if len(vvod_mass) == 0:
+				print("Вы не ввели массив")
 			else:
-				print("Вы ввели не массив!")
+				if len(result) != 0:
+					print(f"Элементы массива кратные '3': {tuple(result)}")
+				else:
+					print("В введенном вами массиве отсутствуют элементы кратные '3'")
 		except ValueError:
 			print("Вы неправильно ввели массив!")
 
